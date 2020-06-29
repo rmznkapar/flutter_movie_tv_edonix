@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:edonix/screens/show.dart';
+import 'package:edonix/req.dart'; // String apiKey = '';
+
 // import 'package:edonix/screens/getters/get_story.dart';
 
 int maxPosts = 5;
@@ -11,7 +13,9 @@ String apiBaseUrl = 'http://image.tmdb.org/t/p/w185/';
 @override
 Future<List> fetchPost() async {
   final response = await http.get(
-      'https://api.themoviedb.org/3/list/3700344?api_key=2c8e3d8e85846891e2bb265dbae3e0d0&language=en-US');
+      'https://api.themoviedb.org/3/list/3700344?api_key=' +
+          apiKey +
+          '&language=en-US');
 
   if (response.statusCode == 200) {
     return json.decode(response.body)['items'];

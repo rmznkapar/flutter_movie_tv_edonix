@@ -2,10 +2,10 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:edonix/req.dart'; // String apiKey = '';
 // import 'package:edonix/screens/getters/get_story.dart';
 
 String apiBaseUrl = 'https://image.tmdb.org/t/p/w227_and_h127_bestv2/';
-String apiKey = '2c8e3d8e85846891e2bb265dbae3e0d0';
 
 @override
 Future<Map> fetchData(String dataId) async {

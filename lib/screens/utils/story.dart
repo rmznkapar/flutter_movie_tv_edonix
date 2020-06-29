@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:edonix/req.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:edonix/screens/show.dart';
@@ -11,7 +12,9 @@ String apiBaseUrl = 'http://image.tmdb.org/t/p/w185/';
 @override
 Future<List> fetchPost() async {
   final response = await http.get(
-      'https://api.themoviedb.org/3/tv/airing_today?api_key=2c8e3d8e85846891e2bb265dbae3e0d0&language=en-US&page=1');
+      'https://api.themoviedb.org/3/tv/airing_today?api_key=' +
+          apiKey +
+          '&language=en-US&page=1');
 
   if (response.statusCode == 200) {
     return json.decode(response.body)['results'];

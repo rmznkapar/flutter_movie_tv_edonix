@@ -4,6 +4,8 @@ import 'package:edonix/screens/movie.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:edonix/screens/show.dart';
+import 'package:edonix/req.dart'; // String apiKey = '';
+
 // import 'package:edonix/screens/getters/get_story.dart';
 
 int maxPost = 10;
@@ -12,8 +14,10 @@ String apiBaseUrl = 'http://image.tmdb.org/t/p/w185/';
 @override
 Future<List> fetchPost(int reqType) async {
   List links = [
-    'https://api.themoviedb.org/3/discover/tv?api_key=2c8e3d8e85846891e2bb265dbae3e0d0&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false',
-    'https://api.themoviedb.org/3/trending/movie/week?api_key=2c8e3d8e85846891e2bb265dbae3e0d0'
+    'https://api.themoviedb.org/3/discover/tv?api_key=' +
+        apiKey +
+        '&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false',
+    'https://api.themoviedb.org/3/trending/movie/week?api_key=' + apiKey
   ];
   final response = await http.get(links[reqType]);
   if (response.statusCode == 200) {
