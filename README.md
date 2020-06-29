@@ -1,8 +1,10 @@
 # edonix
 <h1>Bacic Flutter App for Beginners</h1> 
-<img src="https://ibb.co/yNcY6Z8"><img src="https://i.ibb.co/Twxb47H/iphonexspacegrey-portrait.png" alt="Show Page"/>
-<img src="https://ibb.co/yNcY6Z8"><img src="https://i.ibb.co/chWZqcQ/iphonexspacegrey-landscape.png" alt="Main Page"/>
-<img src="https://ibb.co/yNcY6Z8"><img src="https://i.ibb.co/S7FFgTb/iphonexspacegrey-landscape-1.png" alt="Movie Page"/>
+
+| Show Page      | Main Page     | Movie Page     |
+|------------|-------------|-------------|
+| <img src="https://i.ibb.co/Twxb47H/iphonexspacegrey-portrait.png" alt="Show Page"/>| <img src="https://i.ibb.co/chWZqcQ/iphonexspacegrey-landscape.png" alt="Main Page"/>|<img src="https://i.ibb.co/S7FFgTb/iphonexspacegrey-landscape-1.png" alt="Movie Page"/>|
+
 
 ## Getting Started
 
